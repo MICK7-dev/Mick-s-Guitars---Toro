@@ -1,3 +1,8 @@
+# Mick's Guitars
+
+Proyecto de carrito de compras de guitarras 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
