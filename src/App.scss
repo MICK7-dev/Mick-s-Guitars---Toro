@@ -1,0 +1,61 @@
+
+@import                                  url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin:                                0px;
+  padding:                               0px;
+  box-sizing:                            border-box;
+  font-family:                           'Poppins', sans-serif;
+}
+
+body {
+  overflow-x:                            hidden;
+}
+
+header {
+  color:                                 #aaa;
+  display:                               flex;
+  padding:                               25px;
+  align-items:                           center;
+  justify-content:                       space-between;
+  background-color:                      #202020;
+  a {
+    color:                               #fff;
+    text-decoration:                     none;
+  }
+  > a {
+    font-size:                           25px;
+    font-weight:                         700;
+    line-height:                         normal;
+    text-decoration:                     none;
+  }
+  > ul {
+    > li {
+      color:                             #aaa;
+      padding:                           0px 15px;
+      display:                           inline-block;
+      > a {
+        margin:                          10px 4px;
+        padding:                         5px 10px;
+        position:                        relative;
+        &:before {
+          left:                          0px;
+          width:                         100%;
+          bottom:                        0%;
+          height:                        2px;
+          content:                       '';
+          display:                       block;
+          position:                      absolute;
+          transform:                     scale(0, 1);
+          transition:                    transform 0.4s cubic-bezier(1, 0, 0, 1);
+          background:                    #aaa;
+          transform-origin:              right top;
+        }
+        &:hover::before {
+          transform:                     scale(1, 1);
+          transform-origin:              left top;
+        }
+      }
+    }
+  }
+}
