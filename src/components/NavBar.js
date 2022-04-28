@@ -1,4 +1,5 @@
 import '../App.scss';
+import CartWidget from './CartWidget';
 
 
 function NavBar() {
@@ -13,6 +14,7 @@ function NavBar() {
           <li><a href={url}>BASSES</a></li>
           <li><a href={url}>ACCESSORIES</a></li>
           <li><a href={url}>SHOP</a></li>
+          <li><a href={url}><CartWidget></CartWidget></a></li>
         </ul>
       </header>
     </div>
