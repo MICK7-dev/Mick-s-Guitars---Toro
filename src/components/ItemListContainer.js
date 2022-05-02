@@ -1,12 +1,15 @@
+
 import '../App.scss';
 
-const ItemListContainer = () => {
+const ItemListContainer = ({name, children}) => {
   return (
     <div>
-      <h1 style={{marginTop: 75, fontSize: 40}}>Bienvenidos a Mick's Guitars</h1>
+      <h2>{name}</h2>
+      {children}
     </div>
   )
 }
+
 
 export default ItemListContainer;
 
