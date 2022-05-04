@@ -64,7 +64,7 @@ header {
 
 section.cards {
   display:                               flex;
-  min-height:                            100vh;
+  min-height:                            100%;
   align-items:                           center;
   flex-direction:                        column;
   justify-content:                       center;
@@ -190,6 +190,30 @@ section.cards {
           font-weight:                   500;
         }
       }
+    }
+  }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+
+.CountContainer {
+  width: 250px;
+  height: 50px;
+  margin: 0px auto;
+  text-align: center;
+  .Counter {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    > button {
+      width: 25px;
+      height: 25px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      background-color: transparent;
     }
   }
 }
