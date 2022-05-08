@@ -14,10 +14,7 @@ function App() {
     <div className="App">
       <NavBar/>
       <section className='cards'>
-      <ItemListContainer name={arr[0]}></ItemListContainer>
-        <div className='container'>
-          
-        </div>
+        <ItemListContainer name={arr[0]}></ItemListContainer>
       </section>
     </div>
   );
