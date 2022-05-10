@@ -8,14 +8,10 @@ import ItemListContainer from './components/ItemListContainer';
 
 function App() {
 
-  const arr = ["PRO SERIES SIGNATURE MICK THOMSON SOLOIST™ SL2", "Mick"]
-
   return (
     <div className="App">
       <NavBar/>
-      <section className='cards'>
-        <ItemListContainer name={arr[0]}></ItemListContainer>
-      </section>
+      <ItemListContainer></ItemListContainer>
     </div>
   );
 }

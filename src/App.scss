@@ -62,8 +62,12 @@ header {
   }
 }
 
+.class_flex {
+  display: flex !important;
+}
+
 section.cards {
-  display:                               flex;
+  display:                               none;
   min-height:                            100%;
   align-items:                           center;
   flex-direction:                        column;
