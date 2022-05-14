@@ -67,7 +67,7 @@ header {
 }
 
 section.cards {
-  display:                               none;
+  display:                               flex;
   min-height:                            100%;
   align-items:                           center;
   flex-direction:                        column;
@@ -222,3 +222,48 @@ section.cards {
     }
   }
 }
+
+.hola {
+  display: none;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+
+// .detail {
+//   z-index: 2;
+//   position: relative;
+//   background-color: #F1F1F1;
+//   &:before {
+//     width: 100%;
+//     z-index: -1;
+//     height: 400px;
+//     position: absolute; 
+//     background-color: #E0E0E0;
+//     content: '';
+//   }
+//   .container-detail {
+//     margin: 0px auto;
+//     max-width: 1200px;
+//   }
+//   &_content {
+//     display: flex;
+//     position: relative;
+//     &_info {
+//       > img {
+//         left: 150px;
+//         width: 225px;
+//         // transform: rotate(90deg);
+//         position: relative;
+//       }
+//     }
+//     &_check {
+//       > div {  
+//         width: 300px;
+//         background-color: white;
+//       }
+//     }
+//   }
+// }

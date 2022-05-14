@@ -1,12 +1,12 @@
 import '../App.scss';
 import Item from './item';
 
-function ItemList({items}) {
+function ItemList({ guitars }) {
   return (
     <div className='container'>
-      {items.map(({title, id, price, pictureUrl}) =>
-        <Item key={id} id={id} title={title} price={price} pictureUrl={pictureUrl}></Item>
-      )}
+      {guitars.map((gui) => (
+        <Item key={gui.id} guitar={gui}></Item>
+      ))}
     </div>
   )
 }

@@ -4,13 +4,13 @@ import CartWidget from './CartWidget';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faHeart} from '@fortawesome/free-solid-svg-icons';
  
-function Item({id, title, price, pictureUrl}) {
+function Item({ guitar }) {
 
   return (
     <>
       <div className="card">
         <div className="img_bx">
-          <img src={pictureUrl} alt={title}/>
+          <img src={guitar.pictureUrl} alt={guitar.title}/>
           <ul className="action">
             <li>
               <FontAwesomeIcon icon={faHeart}></FontAwesomeIcon>
@@ -28,11 +28,11 @@ function Item({id, title, price, pictureUrl}) {
         </div>
         <div className="content">
           <div className="product_name">
-            <h3>{title}</h3>
+            <h3>{guitar.title}</h3>
           </div>
           <div className="price_rating">
-            <h2>{price}</h2>
-            <span>#{id}</span>
+            <h2>{guitar.price}</h2>
+            <span>#{guitar.id}</span>
           </div>
         </div>
       </div>
