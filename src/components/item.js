@@ -3,6 +3,7 @@ import '../App.scss';
 import CartWidget from './CartWidget';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faHeart} from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
  
 function Item({ guitar }) {
 
@@ -21,7 +22,7 @@ function Item({ guitar }) {
               <span>Cart</span>
             </li>
             <li>
-              <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
+              <Link to={`/item/${guitar.id}`}><FontAwesomeIcon icon={faEye}></FontAwesomeIcon></Link>
               <span>View</span>
             </li>
           </ul>

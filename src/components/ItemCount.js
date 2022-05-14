@@ -19,7 +19,7 @@ function ItemCount({stockMax , stockMin}) {
 
   const handleClickRest = () => {
     if (count <= stockMin) {
-      alert("El estock minimo es " + stockMin);
+      alert("El stock minimo es " + stockMin);
       return;
     }
     setCount(count - 1);
@@ -27,8 +27,6 @@ function ItemCount({stockMax , stockMin}) {
   };
   return (
     <div className='CountContainer'>
-      <h3>Stock : {stockMax}</h3>
-      <h3>Inicial : {stockMin}</h3>
       <div className='Counter'>
         <button onClick={handleClickRest}>
           <FontAwesomeIcon icon={faMinus}></FontAwesomeIcon>

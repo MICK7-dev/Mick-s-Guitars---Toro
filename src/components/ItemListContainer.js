@@ -3,33 +3,23 @@ import { useEffect, useState } from 'react';
 import '../App.scss';
 import ItemList from './ItemList';
 import { getGuitars } from './guitars'
+import { useParams } from 'react-router-dom';
 
 
 const ItemListContainer = () => {
 
   const [guitars , setGuitars] = useState([]);
 
+  const { categoryID } = useParams(); 
+  // console.log(category)
+
   useEffect(() => {
-    getGuitars()
+    getGuitars(categoryID)
     .then((res) => {
       setGuitars(res);
     })
     .catch((error) => console.log(error))
-  }, [])
-
-  // const task = new Promise((resolve, reject)=> {
-  //   setTimeout(() => {
-  //     resolve('exito')
-  //   }, 2000)
-  // }); 
-
-  // task.then((res) => {
-  //   document.querySelector('.cards').classList.add('class_flex')
-  // })
-  
-
-
-
+  }, [categoryID])
 
   return (
     <section className='cards'>

@@ -1,5 +1,6 @@
 import '../App.scss';
 import CartWidget from './CartWidget';
+import { Link } from 'react-router-dom'
 
 
 function NavBar() {
@@ -7,13 +8,23 @@ function NavBar() {
   return (
     <div className="App">
       <header className="App-header">
-        <a href={url}>Mick's Guitars</a>
+        <Link to="/">Mick's Guitars</Link>
         <ul>
-          <li><a href={url}>HOME</a></li>
-          <li><a href={url}>GUITARS</a></li>
-          <li><a href={url}>BASSES</a></li>
-          <li><a href={url}>ACCESSORIES</a></li>
-          <li><a href={url}>SHOP</a></li>
+          <li>
+            <Link to="/">
+              HOME
+            </Link>
+          </li>
+          <li>
+            <Link to="/category/guitars">
+              GUITARS
+            </Link>
+          </li>
+          <li>
+            <Link to="/category/basses">
+              BASSES
+            </Link>
+          </li>
           <li><a href={url}><CartWidget></CartWidget></a></li>
         </ul>
       </header>

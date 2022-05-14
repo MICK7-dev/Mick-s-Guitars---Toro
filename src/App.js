@@ -1,17 +1,24 @@
 
 import './App.scss';
-// import Card from './components/Card';
+// import { useEffect } from 'react';
 import NavBar from './components/NavBar';
-// import ItemCount from './components/ItemCount';
 import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 
-function App() {
+const App = () => {
 
   return (
     <div className="App">
-      <NavBar/>
-      <ItemListContainer></ItemListContainer>
+      <BrowserRouter>
+        <NavBar/>
+        <Routes>
+          <Route path='/' element={<ItemListContainer />} />
+          <Route path='/category/:categoryID' element={<ItemListContainer />} />
+          <Route path='/item/:id' element={<ItemDetailContainer />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
