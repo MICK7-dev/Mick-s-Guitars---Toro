@@ -3,24 +3,29 @@ import { useState, useEffect } from 'react';
 import '../App.scss';
 import ItemDetail from './ItemDetail';
 import { getGuitar } from './guitars'
+import { useParams } from 'react-router-dom';
 
 const ItemDetailContainer = () => {
 
-  const [guitar , setGuitar] = useState([]);
+  const [guitars , setGuitar] = useState([]);
+
+  const { id } = useParams();
+
+  
 
   useEffect(() => {
-    getGuitar()
+    getGuitar(id)
     .then((res) => {
       setGuitar(res);
     })
     .catch((error) => console.log(error))
-  }, [])
+  }, [id])
 
-  console.log(guitar)
+  // console.log(id)
 
 
   return(
-    <ItemDetail guitarDetail={guitar}></ItemDetail>
+    <ItemDetail guitarDetail={guitars}></ItemDetail>
   )
 }
 

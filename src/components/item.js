@@ -22,7 +22,7 @@ function Item({ guitar }) {
               <span>Cart</span>
             </li>
             <li>
-              <Link to={`/item/${guitar.id}`}><FontAwesomeIcon icon={faEye}></FontAwesomeIcon></Link>
+              <Link to={`/detail/${guitar.id}`}><FontAwesomeIcon icon={faEye}></FontAwesomeIcon></Link>
               <span>View</span>
             </li>
           </ul>
