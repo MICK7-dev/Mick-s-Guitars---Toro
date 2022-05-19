@@ -29,7 +29,9 @@ function Item({ guitar }) {
         </div>
         <div className="content">
           <div className="product_name">
-            <h3>{guitar.title}</h3>
+            <h3>
+              <Link to={`/item/${guitar.id}`}>{guitar.title}</Link>
+            </h3>
           </div>
           <div className="price_rating">
             <h2>{guitar.price}</h2>
