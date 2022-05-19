@@ -3,7 +3,7 @@ const guitarImages = require.context('../assets/images', true);
 
 const guitars = [
   {
-    id: 1,//2914224576 
+    id: 2914224576 ,
     title: "PRO SERIES SIGNATURE MICK THOMSON SOLOIST™ SL2", 
     stock: 2,
     model: 'SOLOIST™',
@@ -13,7 +13,7 @@ const guitars = [
     pictureUrl: guitarImages(`./mickThompson-guitar-V.png`)
   },
   {
-    id: 2,//2919260568 
+    id: 2919260568 ,
     title: "X SERIES SOLOIST™ SLA6 DX BARITONE", 
     stock: 15,
     model: 'X SERIES SOLOIST™',
@@ -23,7 +23,7 @@ const guitars = [
     pictureUrl: guitarImages(`./SLA6_DX_BARITONE.png`)
   },
   {
-    id: 3,//2803367880 
+    id: 2803367880, 
     title: "USA SIGNATURE MISHA MANSOOR JUGGERNAUT HT7FM", 
     stock: 9,
     model: 'JUGGERNAUT',
@@ -33,7 +33,7 @@ const guitars = [
     pictureUrl: guitarImages('./MANSOOR_JUGGERNAUT_HT7FM.png')
   },
   {
-    id: 4,//2913335503 
+    id: 2913335503,
     title: "Pro Series Signature Chris Broderick Soloist™ 7", 
     stock: 2,
     model: 'SOLOIST™',
@@ -74,7 +74,7 @@ export const getGuitars = (categoryID) => {
 
 export const getGuitar = (id) => {
   return new Promise((resolve, reject) => {
-    const guitarIdFilter = Object.values(guitars)
+    const guitarIdFilter = guitars.find((prod) => prod.id == id)
     setTimeout(() => {
         // resolve(guitars);
       if (id === undefined) {
@@ -82,8 +82,8 @@ export const getGuitar = (id) => {
         console.log('no funciona')
       } else {
         console.log('Funciona!')
-        console.log(Object.find(guitars.id))
-        // resolve(guitarIdFilter);
+        console.log(guitarIdFilter)
+        resolve(guitarIdFilter);
       }
     }, 2000)
   })
