@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faMinus  } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom'
 
 function ItemCount({stockMax , stockMin}) {
 
@@ -14,7 +15,7 @@ function ItemCount({stockMax , stockMin}) {
       return;
     }
     setCount(count + 1);
-    console.log(count)
+    // console.log(count)
   };
 
   const handleClickRest = () => {
@@ -23,8 +24,15 @@ function ItemCount({stockMax , stockMin}) {
       return;
     }
     setCount(count - 1);
-    console.log(count)
+    // console.log(count)
   };
+
+  
+  const addCart = () => {
+    console.log(count)
+    return count
+  }
+  
   return (
     <div className='CountContainer'>
       <div className='Counter'>
@@ -36,6 +44,7 @@ function ItemCount({stockMax , stockMin}) {
           <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>
         </button>
       </div>
+      <button onClick={() => addCart(count)}><Link to={'/Cart/'}>Agregar al Carrito</Link></button>
     </div>
   );
 

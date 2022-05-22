@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 
 
 function NavBar() {
-  let url = "#";
   return (
     <div className="App">
       <header className="App-header">
@@ -25,7 +24,11 @@ function NavBar() {
               BASSES
             </Link>
           </li>
-          <li><a href={url}><CartWidget></CartWidget></a></li>
+          <li>
+            <Link to={"/Cart/"}>
+              <CartWidget></CartWidget>
+            </Link>
+          </li>
         </ul>
       </header>
     </div>
