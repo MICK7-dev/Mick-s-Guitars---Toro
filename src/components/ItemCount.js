@@ -29,7 +29,8 @@ function ItemCount({stockMax , stockMin}) {
 
   
   const addCart = () => {
-    console.log(count)
+    const producCart = count
+    console.log(producCart)
     return count
   }
   
@@ -44,7 +45,7 @@ function ItemCount({stockMax , stockMin}) {
           <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>
         </button>
       </div>
-      <button onClick={() => addCart(count)}><Link to={'/Cart/'}>Agregar al Carrito</Link></button>
+      <Link onClick={() => addCart()} to={'/Cart'}>Comprar</Link>
     </div>
   );
 
