@@ -1,11 +1,14 @@
 
-import { useState } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faMinus  } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom'
+import { getGuitar } from './guitars'
+import { useParams } from 'react-router-dom';
+import { ItemsContext } from "./CartContext";
 
-function ItemCount({stockMax , stockMin}) {
+function ItemCount({stockMax , stockMin, guitarDetail}) {
 
   const [count, setCount] = useState(stockMin);
 
@@ -27,12 +30,23 @@ function ItemCount({stockMax , stockMin}) {
     // console.log(count)
   };
 
+  const [product, setProduct] = useState([count]);
+  const { id } = useParams();
+
+  useEffect(() => {
+    getGuitar(id)
+    .then((res) => {
+      setProduct(res);
+    })
+    .catch((error) => console.log(error))
+  }, [id])
   
-  const addCart = () => {
-    const producCart = count
-    console.log(producCart)
-    return count
-  }
+  // console.log(product)
+  const [items, setItems] = useContext(ItemsContext);
+  const producCart = count;
+  const newObj = { obj: product, quantity: producCart }
+
+  
   
   return (
     <div className='CountContainer'>
@@ -45,7 +59,7 @@ function ItemCount({stockMax , stockMin}) {
           <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>
         </button>
       </div>
-      <Link onClick={() => addCart()} to={'/Cart'}>Comprar</Link>
+      <Link onClick={() => setItems(newObj)} to={'/Cart'}>Comprar</Link>
     </div>
   );
 

@@ -11,8 +11,6 @@ const ItemDetailContainer = () => {
 
   const { id } = useParams();
 
-  
-
   useEffect(() => {
     getGuitar(id)
     .then((res) => {

@@ -304,3 +304,33 @@ section.cards {
     padding: 75px 25px;
   }
 }
+
+
+.cart {
+  width:                               1200px;
+  margin: 0px auto;
+  .cart-row {
+    display: flex;
+    padding: 25px;
+    align-items: center;
+    justify-content: center;
+    > div:first-child {
+      padding-right: 50px;
+      > h2 {
+        font-size: 21px;
+      }
+      > h3 {
+        padding: 3px 0px;
+        font-size: 17px;
+        font-weight: 600;
+      }
+    }
+    > div:last-child {
+      padding: 10px 75px;
+      background-color: #fff;
+      > img {
+        width: 100px;
+      }
+    }
+  }
+}
